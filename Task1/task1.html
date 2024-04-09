@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./task1.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/fontawesome-free-6.5.2-web/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            
+                <div class="avatar-title">
+                    <div class="image">
+                        <img src="/image/avatar.png" alt="" class="avatar"> 
+                    </div>
+                    <h2>Payment info</h2>
+                </div>
+                <div class="zone">
+                    <div>
+                        <label class="label-name" for="fullname">Full Name</label>
+                    </div>
+                    <div>
+                        <input placeholder="Full Name" style="width: 100%;" type="text" name="fullname" id="fullName"
+                            class="input-name">
+                    </div>
+                </div>
+                <div class="zone">
+                    <div class="text-credit">
+                        <label class="label-credit" for="numberCard">Credit Card Number</label>
+                    </div>
+                    <div class="input-box">
+                        <input  placeholder=" 1234 1234 1234 1234" style= "width: 100%; background-color: #E2E6EE;" type="text" name="" id="numberCard" maxlength="19" oninput="creditCard(event)" 
+                            class="input-credit">
+                        <i class='bx bxs-credit-card'></i>
+                        <p class="err" id="error1"></p>
+                    </div>
+                    
+                </div>
+                <div class="zone-2">
+                    <div class="text-date">
+                        <div class="exp-date">
+                            <label  class="label-date"for="time">Exp Date</label>
+                        </div>
+                        <div>
+                            <!-- <input  type="month" name="" style="background-color: #E2E6EE;" id="time"  class="input-date"> -->
+                            <input maxlength='5' style="background-color: #E2E6EE;" id="time"  class="input-date" placeholder="MM/YY" type="text" onkeyup="formatString(event); " >
+                            <p class="err" id="error4"></p>
+                        </div>
+                    </div>
+                    <div class="cvv">
+                        <div class="text-cvv">
+                            <label  class="label-cvv" for="visaCard">CVV</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" style="background-color: #E2E6EE;" name="" id="visaCard" class="input-cvv" maxlength="3" oninput="CVV(event)">
+                            <i class='bx bx-info-circle'></i>
+                            <p class="err" id="error2"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="zone">
+                    <div class="">
+                        <label class="label-code" for="code">Zip Code</label>
+                    </div>
+                    <div class="text-code">
+                        <input placeholder="90210" style="width: 100%;background-color: #E2E6EE; " type="text" name="code" id="code" maxlength="12" oninput="zipCode(event)"
+                            class="input-code">
+                            <p class="err" id="error3"></p>
+                    </div>
+                    
+                </div>
+                <div class="zone-3">
+                    <button class="submitBtn" type="submit" name="" id="submitBtn" value="Confirm Payment" onclick="errorMessage()" onclick="submitBtn(event)">Confirm Payment </button>
+                    <p class="success" id="Successful" style="size: 10px;"></p>
+                    <label>You verify that this info is correct</label>
+                </div>
+            
+        </div>
+    </div>
+</body>
+<script src="./task1.js"></script>
+</html>
