@@ -139,6 +139,7 @@ document.getElementById("submitBtn").onclick = function() {
                 document.getElementById("time").style.border = "3px solid green";
                 var successMessage = document.getElementById("Successful");
                 successMessage.textContent = "Payment successful!";
+                successMessage.style.fontSize = "10px";
                 successMessage.style.color = "green";
                 
         }, 3000);
